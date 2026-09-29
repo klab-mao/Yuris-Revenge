@@ -22,22 +22,26 @@ Players:
 		Name: Multi0
 		Playable: True
 		Required: True
-		Faction: Random
+		Faction: soviets
+		LockFaction: True
 		Enemies: Multi1, Multi2, Multi3, Creeps
 	PlayerReference@Multi1:
 		Name: Multi1
 		Bot: test
-		Faction: Random
+		Faction: allies
+		LockFaction: True
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
 		Bot: test
-		Faction: Random
+		Faction: allies
+		LockFaction: True
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
 		Bot: test
-		Faction: Random
+		Faction: allies
+		LockFaction: True
 		Enemies: Multi0, Creeps
 Actors:
 	Actor0: caoild
