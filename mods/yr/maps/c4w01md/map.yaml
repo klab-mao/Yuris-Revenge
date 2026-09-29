@@ -9,36 +9,25 @@ Visibility: MissionSelector
 Categories: Cooperative Mission
 Players:
 	PlayerReference@Neutral:
-		Name: Neutral
-		OwnsWorld: True
-		NonCombatant: True
-		Faction: Random
 	PlayerReference@Creeps:
-		Name: Creeps
-		NonCombatant: True
-		Faction: Random
-		Enemies: Multi0, Multi1, Multi2, Multi3
 	PlayerReference@Multi0:
-		Name: Multi0
-		Playable: True
-		Required: True
-		Faction: allies
-		LockFaction: True
-		Enemies: Multi1, Multi2, Multi3, Creeps
 	PlayerReference@Multi1:
 		Name: Multi1
+		Playable: True
 		Bot: test
 		Faction: yuris
 		LockFaction: True
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
+		Playable: True
 		Bot: test
 		Faction: yuris
 		LockFaction: True
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
+		Playable: True
 		Bot: test
 		Faction: yuris
 		LockFaction: True
