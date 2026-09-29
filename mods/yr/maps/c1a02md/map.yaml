@@ -22,7 +22,7 @@ Players:
 		Name: Multi0
 		Playable: True
 		Required: True
-		Faction: allies
+		Faction: random-allies
 		LockFaction: True
 		Enemies: Multi1, Multi2, Multi3, Creeps
 	PlayerReference@Multi1:
