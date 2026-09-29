@@ -2,6 +2,7 @@
 
 local player
 local objective
+local won = false
 
 WorldLoaded = function()
 	player = Player.GetPlayer("America1")
@@ -15,11 +16,9 @@ WorldLoaded = function()
 		Media.PlaySpeechNotification(player, "MissionAccomplished")
 	end)
 
-	-- Check for victory: all enemy actors dead
-	-- Only start checking after 30 seconds to allow enemies to build
 	Trigger.AfterDelay(DateTime.Seconds(30), function()
 		local function checkWin()
-			if player.WinState ~= WinState.Undefined then
+			if won then
 				return
 			end
 
@@ -34,6 +33,7 @@ WorldLoaded = function()
 			end
 
 			if not enemiesAlive then
+				won = true
 				player.MarkCompletedObjective(objective)
 			else
 				Trigger.AfterDelay(DateTime.Seconds(10), checkWin)
