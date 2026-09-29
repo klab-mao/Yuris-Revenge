@@ -29,22 +29,19 @@ Players:
 		Name: Multi1
 		Playable: True
 		Bot: test
-		Faction: allies
-		LockFaction: True
+		Faction: Random
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
 		Playable: True
 		Bot: test
-		Faction: allies
-		LockFaction: True
+		Faction: Random
 		Enemies: Multi0, Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
 		Playable: True
 		Bot: test
-		Faction: allies
-		LockFaction: True
+		Faction: Random
 		Enemies: Multi0, Creeps
 Actors:
 	Actor0: cabhut

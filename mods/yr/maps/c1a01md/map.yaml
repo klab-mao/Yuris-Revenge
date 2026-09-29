@@ -28,8 +28,7 @@ Players:
 		Name: America2
 		Playable: True
 		Bot: test
-		LockFaction: True
-		Faction: america
+		Faction: Random
 		LockColor: True
 		Color: 1E787B
 		LockTeam: True
@@ -39,8 +38,7 @@ Players:
 		Name: Soviets1
 		Playable: True
 		Bot: test
-		LockFaction: True
-		Faction: cuba
+		Faction: Random
 		LockColor: True
 		Color: FF0000
 		LockSpawn: True
@@ -52,8 +50,7 @@ Players:
 		Name: Soviets2
 		Playable: True
 		Bot: test
-		LockFaction: True
-		Faction: cuba
+		Faction: Random
 		LockColor: True
 		Color: FFA500
 		LockSpawn: True
