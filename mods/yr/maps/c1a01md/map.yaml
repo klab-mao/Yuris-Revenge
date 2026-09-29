@@ -9,7 +9,21 @@ Visibility: MissionSelector
 Categories: Cooperative Mission
 Players:
 	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
 	PlayerReference@America1:
+		Name: America1
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: america
+		LockColor: True
+		Color: 4172A2
+		LockTeam: True
+		Allies: America2
+		Enemies: Soviets1, Soviets2
 	PlayerReference@America2:
 		Name: America2
 		Playable: True

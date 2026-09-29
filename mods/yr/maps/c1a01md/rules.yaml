@@ -2,7 +2,7 @@ World:
 	ScriptLobbyDropdown@difficulty:
 		ID: difficulty
 		Label: Difficulty
-		Default: normal
+		Default: easy
 		Values:
 			easy: Easy
 			normal: Normal
