@@ -5,7 +5,7 @@ Author: Westwood Studios
 Tileset: NEWURBAN
 MapSize: 105,220
 Bounds: 2,6,101,206
-Visibility: Lobby
+Visibility: MissionSelector
 Categories: Cooperative Mission
 Players:
 	PlayerReference@Neutral:
@@ -21,21 +21,22 @@ Players:
 	PlayerReference@Multi0:
 		Name: Multi0
 		Playable: True
+		Required: True
 		Faction: Random
 		Enemies: Creeps
 	PlayerReference@Multi1:
 		Name: Multi1
-		Playable: True
+		Bot: campaign
 		Faction: Random
 		Enemies: Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
-		Playable: True
+		Bot: campaign
 		Faction: Random
 		Enemies: Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
-		Playable: True
+		Bot: campaign
 		Faction: Random
 		Enemies: Creeps
 Actors:
@@ -5429,6 +5430,17 @@ Actors:
 		Owner: Neutral
 Rules:
 	World:
+		ScriptLobbyDropdown@difficulty:
+			ID: difficulty
+			Label: Difficulty
+			Default: normal
+			Values:
+				easy: Easy
+				normal: Normal
+				hard: Hard
 		GlobalLightingPaletteEffect:
 			Green: 0.95
 			Blue: 0.95
+
+	Player:
+		-ConquestVictoryConditions:

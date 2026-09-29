@@ -2056,9 +2056,9 @@ order-icons:
 sidebar-observer:
 	Inherits: ^Chrome
 	Regions:
-		background: 785,15,219,289
-		replay-bottom: 785,283,219,96
-		observer-bottom: 785,283,219,96
+		background: 0,0,234,287
+		replay-bottom: 0,325,234,40
+		observer-bottom: 0,325,234,8
 
 sidebar-button-observershroud: 
 	Inherits: ^Chrome

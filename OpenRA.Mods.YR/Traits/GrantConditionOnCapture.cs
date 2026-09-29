@@ -96,6 +96,8 @@ namespace OpenRA.Mods.YR.Traits
             var actorsBelongToOldFaction = w.Actors.Where(o => o.Owner == oldPlayer);
             foreach (var actor in actorsBelongToOldFaction)
             {
+                if (conditionToken == ConditionManager.InvalidConditionToken)
+                    break;
                 conditionToken = conditionManager.RevokeCondition(actor, conditionToken);
             }
         }
@@ -112,6 +114,8 @@ namespace OpenRA.Mods.YR.Traits
                 var actors = w.Actors.Where(o => o.Owner == thisPlayer);
                 foreach (var actor in actors)
                 {
+                    if (conditionToken == ConditionManager.InvalidConditionToken)
+                        break;
                     conditionToken = conditionManager.RevokeCondition(actor, conditionToken);
                 }
             }

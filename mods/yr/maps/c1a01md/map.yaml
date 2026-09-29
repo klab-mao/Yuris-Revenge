@@ -5,7 +5,7 @@ Author: Westwood Studios
 Tileset: TEMPERATE
 MapSize: 87,142
 Bounds: 2,6,82,130
-Visibility: Lobby
+Visibility: MissionSelector
 Categories: Cooperative Mission
 Players:
 	PlayerReference@Neutral:
@@ -26,8 +26,7 @@ Players:
 		Enemies: Soviets1, Soviets2
 	PlayerReference@America2:
 		Name: America2
-		Playable: True
-		Required: True
+		Bot: campaign
 		LockFaction: True
 		Faction: america
 		LockColor: True
@@ -37,8 +36,7 @@ Players:
 		Enemies: Soviets1, Soviets2
 	PlayerReference@Soviets1:
 		Name: Soviets1
-		Playable: True
-		Required: True
+		Bot: campaign
 		LockFaction: True
 		Faction: cuba
 		LockColor: True
@@ -50,8 +48,7 @@ Players:
 		Enemies: America1, America2
 	PlayerReference@Soviets2:
 		Name: Soviets2
-		Playable: True
-		Required: True
+		Bot: campaign
 		LockFaction: True
 		Faction: cuba
 		LockColor: True

@@ -195,7 +195,7 @@ namespace OpenRA.Mods.YR.Traits
 
 			public IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
 			{
-				throw new System.NotImplementedException();
+				return new List<IRenderable>();
 			}
 		}
 	}

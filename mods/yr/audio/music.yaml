@@ -1,48 +1,41 @@
-intro: INTRO
-	Filename: drok
+# Music from theme.mix (RA2 soundtrack) -- thememd.mix source was corrupt (zero-filled data)
+intro: Grinder
+	Filename: grinder
 	Extension: wav
 
-score: SCORE
-	Filename: scorex
+score: Score
+	Filename: ra2-sco
 	Extension: wav
 
-loading: LOADING
-	Filename: bully
+credits: Credits
+	Filename: ra2-opt
 	Extension: wav
 
-credits: CREDITS
-	Filename: optionx
+grinder: Grinder
 	Extension: wav
-
-brainfreeze: BrainFreeze
-	Filename: brainfre
+power: Power
 	Extension: wav
-
-drok: Drok
-	Filename: drok
+fortific: Fortification
 	Extension: wav
-
-deceiver: Deceiver
-	Filename: deceiver
+indeep: In Deep
 	Extension: wav
-
-phatattack: PhatAttack
-	Filename: phatatta
+tension: Tension
 	Extension: wav
-
-bullykit: BullyKit
-	Filename: bully
+eaglehun: Eagle Hunter
 	Extension: wav
-
-defendthebase: DefendTheBase
-	Filename: defend
+industro: Industro Funk
 	Extension: wav
-
-tactics: Tactics
-	Filename: tactics
+jank: Jank
 	Extension: wav
-
-trancelvania: TranceLVania
-	Filename: trancelv
+200meter: 200 Meters
 	Extension: wav
-
+blowitup: Blow It Up
+	Extension: wav
+destroy: Destroy
+	Extension: wav
+burn: Burn
+	Extension: wav
+motorize: Motorized
+	Extension: wav
+hm2: HM 2
+	Extension: wav

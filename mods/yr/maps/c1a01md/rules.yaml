@@ -1,4 +1,15 @@
 World:
+	ScriptLobbyDropdown@difficulty:
+		ID: difficulty
+		Label: Difficulty
+		Default: normal
+		Values:
+			easy: Easy
+			normal: Normal
+			hard: Hard
 	GlobalLightingPaletteEffect:
 		Red: 0.5
 		Green: 0.6
+
+Player:
+	-ConquestVictoryConditions:

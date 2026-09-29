@@ -213,7 +213,7 @@ namespace OpenRA.Mods.YR.Traits
 			}
 		}
 
-		static int GetWeight(Actor a) { return a.Info.TraitInfo<PassengerInfo>().Weight; }
+		static int GetWeight(Actor a) { var pi = a.Info.TraitInfoOrDefault<PassengerInfo>(); return pi != null ? pi.Weight : 0; }
 
 		public IEnumerable<IOrderTargeter> Orders
 		{
@@ -412,14 +412,16 @@ namespace OpenRA.Mods.YR.Traits
 		{
 			var n = i * Info.MaxWeight / Info.PipCount;
 
-			foreach (var c in cargo)
-			{
-				var pi = c.Info.TraitInfo<PassengerInfo>();
-				if (n < pi.Weight)
-					return pi.PipType;
-				else
-					n -= pi.Weight;
-			}
+		foreach (var c in cargo)
+		{
+			var pi = c.Info.TraitInfoOrDefault<PassengerInfo>();
+			if (pi == null)
+				continue;
+			if (n < pi.Weight)
+				return pi.PipType;
+			else
+				n -= pi.Weight;
+		}
 
 			return PipType.Transparent;
 		}
