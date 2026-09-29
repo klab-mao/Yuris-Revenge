@@ -12,4 +12,5 @@ World:
 		Green: 0.6
 
 Player:
-	-ConquestVictoryConditions:
+	ConquestVictoryConditions:
+		InitialDelay: 150

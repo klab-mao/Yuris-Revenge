@@ -4987,4 +4987,5 @@ Rules:
 			Green: 0.7
 
 	Player:
-		-ConquestVictoryConditions:
+		ConquestVictoryConditions:
+			InitialDelay: 150

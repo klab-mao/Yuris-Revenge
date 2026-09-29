@@ -7268,4 +7268,5 @@ Rules:
 			Blue: 0.9
 
 	Player:
-		-ConquestVictoryConditions:
+		ConquestVictoryConditions:
+			InitialDelay: 150
