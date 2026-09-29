@@ -23,22 +23,22 @@ Players:
 		Playable: True
 		Required: True
 		Faction: Random
-		Enemies: Creeps
+		Enemies: Multi1, Multi2, Multi3, Creeps
 	PlayerReference@Multi1:
 		Name: Multi1
-		Bot: campaign
+		Bot: test
 		Faction: Random
-		Enemies: Creeps
+		Enemies: Multi0, Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
-		Bot: campaign
+		Bot: test
 		Faction: Random
-		Enemies: Creeps
+		Enemies: Multi0, Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
-		Bot: campaign
+		Bot: test
 		Faction: Random
-		Enemies: Creeps
+		Enemies: Multi0, Creeps
 Actors:
 	Actor0: canwy23
 		Location: 127,-37

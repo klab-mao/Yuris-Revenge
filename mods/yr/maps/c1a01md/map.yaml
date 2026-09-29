@@ -26,7 +26,7 @@ Players:
 		Enemies: Soviets1, Soviets2
 	PlayerReference@America2:
 		Name: America2
-		Bot: campaign
+		Bot: test
 		LockFaction: True
 		Faction: america
 		LockColor: True
@@ -36,7 +36,7 @@ Players:
 		Enemies: Soviets1, Soviets2
 	PlayerReference@Soviets1:
 		Name: Soviets1
-		Bot: campaign
+		Bot: test
 		LockFaction: True
 		Faction: cuba
 		LockColor: True
@@ -48,7 +48,7 @@ Players:
 		Enemies: America1, America2
 	PlayerReference@Soviets2:
 		Name: Soviets2
-		Bot: campaign
+		Bot: test
 		LockFaction: True
 		Faction: cuba
 		LockColor: True
