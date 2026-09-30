@@ -491,6 +491,16 @@ mgtk:
 		VarietyCondition: varing
 	Targetable:
 		RequiresCondition: !varing
+	Targetable@MC:
+		TargetTypes: MindControl
+		RequiresCondition: !controlled && !varing
+	Targetable@SMC:
+		TargetTypes: SuperMindControl
+		RequiresCondition: !controlled && !varing
+	Targetable@Disguised:
+		TargetTypes: Ground, Vehicle
+		RequiresCondition: varing
+		RequiresForceFire: true
 	WithMuzzleOverlay:
 
 robo:

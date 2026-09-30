@@ -30,19 +30,19 @@ Players:
 		Playable: True
 		Bot: test
 		Faction: Random
-		Enemies: Multi0, Creeps
+		Enemies: Multi0, Multi2, Multi3, Creeps
 	PlayerReference@Multi2:
 		Name: Multi2
 		Playable: True
 		Bot: test
 		Faction: Random
-		Enemies: Multi0, Creeps
+		Enemies: Multi0, Multi1, Multi3, Creeps
 	PlayerReference@Multi3:
 		Name: Multi3
 		Playable: True
 		Bot: test
 		Faction: Random
-		Enemies: Multi0, Creeps
+		Enemies: Multi0, Multi1, Multi2, Creeps
 Actors:
 	Actor0: cawash06
 		Location: 89,2
