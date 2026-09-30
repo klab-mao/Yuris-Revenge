@@ -111,7 +111,8 @@ namespace OpenRA.Mods.YR.Traits
             {
                 if (varietiedActor != null && varietiedActor.IsInWorld)
                 {
-                    self.World.Remove(varietiedActor);
+                    var toRemove = varietiedActor;
+                    self.World.AddFrameEndTask(w => w.Remove(toRemove));
                 }
                 return r;
             }
@@ -128,7 +129,29 @@ namespace OpenRA.Mods.YR.Traits
             {
                 if (!string.IsNullOrEmpty(info.Actor))
                 {
-                    return createActorAndRender(self.World, info.Actor, wr);
+                    if (varietiedActor != null && varietiedActor.IsInWorld && varietiedActor.Location == self.Location)
+                        return varietiedActor.Render(wr);
+
+                    if (varietiedActor != null && varietiedActor.IsInWorld)
+                    {
+                        var toRemove = varietiedActor;
+                        self.World.AddFrameEndTask(w => w.Remove(toRemove));
+                    }
+
+                    TypeDictionary dic = new TypeDictionary
+                    {
+                        new CenterPositionInit(self.CenterPosition),
+                        new LocationInit(self.Location),
+                        new OwnerInit(self.Owner),
+                        new FacingInit(128)
+                    };
+                    varietiedActor = self.World.CreateActor(info.Actor, dic);
+                    if (!varietiedActor.IsInWorld)
+                    {
+                        var toAdd = varietiedActor;
+                        self.World.AddFrameEndTask(w => w.Add(toAdd));
+                    }
+                    return varietiedActor.Render(wr);
                 }
                 else
                 {
@@ -148,25 +171,6 @@ namespace OpenRA.Mods.YR.Traits
                 && (self.CenterPosition - a.Actor.CenterPosition).LengthSquared <= a.Trait.Info.Range.LengthSquared);
         }
 
-        private IEnumerable<IRenderable> createActorAndRender(World world, string actor, WorldRenderer wr)
-        {
-            TypeDictionary dic = new TypeDictionary
-            {
-                new CenterPositionInit(self.CenterPosition),
-                new LocationInit(self.Location),
-                new OwnerInit(self.Owner),
-                new FacingInit(128)
-            };
-            varietiedActor = world.CreateActor(info.Actor, dic);
-            if (!varietiedActor.IsInWorld)
-            {
-                self.World.AddFrameEndTask((w =>
-                {
-                    world.Add(varietiedActor);
-                }));
-            }
-            return varietiedActor.Render(wr);
-        }
 
         public IEnumerable<Primitives.Rectangle> ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Primitives.Rectangle> bounds)
         {
@@ -234,8 +238,14 @@ namespace OpenRA.Mods.YR.Traits
         {
             if (varietiedActor != null && varietiedActor.IsInWorld)
             {
-                varietiedActor.Kill(self);
+                var toRemove = varietiedActor;
+                self.World.AddFrameEndTask(w =>
+                {
+                    w.Remove(toRemove);
+                    toRemove.Kill(self);
+                });
             }
+            varietiedActor = null;
             remainingTime = Math.Max(remainingTime, time);
         }
 
